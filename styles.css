@@ -1,0 +1,94 @@
+:root {
+    --bg-primary: #17212b;
+    --bg-secondary: #222e3a;
+    --input-bg: #2a3948;
+    --button-primary: #0088cc;
+    --button-hover: #0077b5;
+    --text-color: #ffffff;
+    --notification-bg: #2a3948;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.container {
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 320px;
+    position: relative;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    background-color: var(--button-primary);
+    color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background-color: var(--notification-bg);
+    color: var(--text-color);
+    padding: 12px 24px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 14px;
+}
+
+.notification.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
